@@ -1,0 +1,27 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "set DEBUG=app:* && nodemon index",
+    "start": "SET NODE_ENV=production && node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "JHOAN SEBASTIAN RODRIGUEZ",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/boom": "^9.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "lint-staged": "^10.0.8",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1"
+  }
+}
