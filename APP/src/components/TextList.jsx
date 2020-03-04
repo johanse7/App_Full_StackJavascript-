@@ -1,15 +1,13 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+
 import TextListWrapper from '../assest/styles/components/TextListWrapper';
 
-const TextList = (props) => {
-  const processText = useSelector(({ processText }) => 
-    processText,
-  );
+const TextList = ({ texts }) => {
+
   return (
     <TextListWrapper>
       <section className="items">
-        {processText.texts.map((item, index) => (
+        {texts.map((item, index) => (
           <article
             className='card'
             key={`text-${index}`}
