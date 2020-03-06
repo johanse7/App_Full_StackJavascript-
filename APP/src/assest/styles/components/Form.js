@@ -6,7 +6,15 @@ const FormWrapper = styled.form`
     display: flex;
     justify-content:center;
     align-items:center;
-    
+    .form-group{
+        display:flex;
+        flex-direction:column;
+
+        & p {
+            margin:0;
+            color:red;
+        }
+    }
 
     ${device.mobilePortrait`
          width:100%;

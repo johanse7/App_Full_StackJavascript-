@@ -16,18 +16,19 @@ export const Input = styled.input.attrs((props) => ({
     transition: .18s ease-out;
     padding:0.5em;
     outline:none;
-
+    border: 1px solid  ${(props)=>!props.error? '#B8B6B6':'red'};
     &:hover{
         box-shadow: inset 1px 2px 8px rgba(0, 0, 0, 0.02);
     }
     &:focus{
         color: #4b515d;
-        border: 1px solid #B8B6B6;
+    border: 1px solid  ${(props)=>!props.error? '#B8B6B6':'red'};
         box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.01), 0px 0px 8px rgba(0, 0, 0, 0.2);
     }
     &::placeholder {
         text-align:center;
     }
+
 
     ${device.mobilePortrait`
          width:100%;

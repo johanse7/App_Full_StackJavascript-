@@ -2,15 +2,15 @@ export const FETCH_PROCESS_TEXT_REQUEST = 'FETCH_PROCESS_TEXT_REQUEST';
 export const FETCH_PROCESS_TEXT_SUCCESS = 'FETCH_PROCESS_TEXT_SUCCESS';
 export const FETCH_PROCESS_TEXT_ERROR = 'FETCH_PROCESS_TEXT_ERROR';
 
-export const fetchProcessTokens = () => (dispatch) => {
+export const fetchProcessTokens = (text) => (dispatch) => {
   dispatch({ type: FETCH_PROCESS_TEXT_REQUEST })
 
-  fetch('https://jsonplaceholder.typicode.com/posts')
+  fetch(`http://localhost:3000/api/processText/${text}`)
     .then(res => res.json())
-    .then(textResponse => {
+    .then(({text}) => {
       dispatch({
         type: FETCH_PROCESS_TEXT_SUCCESS,
-        payload: textResponse
+        payload: text
       })
     })
     .catch(error => {

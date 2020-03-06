@@ -26,12 +26,13 @@ const TextListWrapper = styled.div`
     `}
   }
   .card {
-    text-decoration: none;
+ 
     box-shadow: 8px 14px 38px rgba(39,44,49,.08), 1px 3px 8px rgba(39,44,49,.1);
     border-radius: 5px;
     margin: 0 0 20px 0;
     display: block;
     animation-duration: 4s;
+    animation-fill-mode: forwards;
     animation-name: ${fade};
     & p{
       font-size: 18px;
@@ -39,6 +40,7 @@ const TextListWrapper = styled.div`
       padding: 5px 10px;
       display: flex;
       justify-content: space-between;
+      word-break: break-all;  
     }
   }
 `;
