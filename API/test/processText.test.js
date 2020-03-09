@@ -8,6 +8,7 @@ const app = require('../index'),
     it('process by query param', function(done) { 
       request(app) .get('/api/processText/my text') .end(function(err, res) { 
         expect(res.statusCode).to.equal(200); 
+        expect(res.body.text).to.equal('my text');
         done(); 
       }); 
     }); 
