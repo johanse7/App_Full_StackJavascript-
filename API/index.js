@@ -9,13 +9,13 @@ const processText = require('./Routes/index');
 
 
 const  corsOptions = {
-  origin: '*',
-  optionsSuccessStatus: 200
+  origin: config.urlSite,
+  credentials: true
 };
 
+app.use(cors(corsOptions));
 // body parser
 app.use(express.json());
-app.use(cors(corsOptions));
 
 processText(app);
 
@@ -25,3 +25,5 @@ app.get('*', (request, response, next) => {
 app.listen(config.port, () => {
   console.log(`Server started! http://localhost:${config.port}`);
 });
+
+module.exports = app;

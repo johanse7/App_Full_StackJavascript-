@@ -4,13 +4,13 @@ import { useForm } from 'react-hook-form';
 import { InputAddText } from '../assest/styles/components/General/Input';
 import Button from '../assest/styles/components/General/Botton';
 import FormWrapper from '../assest/styles/components/Form';
-import { fetchProcessTokens } from '../redux/actions/processTextActions'
+import { fetchProcessText } from '../redux/actions/processTextActions'
 
 const Form = (props) => {
     const { register, handleSubmit, errors, reset } = useForm();
     const dispatch = useDispatch()
     const onSubmit = ({ text }) => {
-        dispatch(fetchProcessTokens(text))
+        dispatch(fetchProcessText(text))
         reset()
     };
 

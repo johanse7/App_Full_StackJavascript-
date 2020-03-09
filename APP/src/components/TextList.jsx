@@ -1,6 +1,6 @@
 import React from 'react';
-
 import TextListWrapper from '../assest/styles/components/TextListWrapper';
+import Card from './Card';
 
 const TextList = ({ texts }) => {
 
@@ -8,12 +8,11 @@ const TextList = ({ texts }) => {
     <TextListWrapper>
       <section className="items">
         {texts.map((item, index) => (
-          <article
-            className='card'
+          <Card
             key={`text-${index}`}
+            text={item}
           >
-            <p>{item}</p>
-          </article>
+          </Card>
         ))
         }
       </section>

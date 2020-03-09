@@ -1,0 +1,2 @@
+NODE_ENV: development
+URL_SITE: http://localhost:8080
